@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/svg+xml" href="images/logos/favicon.svg">
         <link rel="icon" type="image/png" href="images/logos/favicon.png">
+        <!-- <link rel="stylesheet" href="css/html5reset.css"> -->
+        <link rel="stylesheet" href="css/style.css">
         <title>All About Valorant</title>
     </head>
     <body>
         <header>
-            <h1>VALORANT</h1>
             <nav>
-                <ul>
-                    <li class="active"><a href="agents.html">Agents</a></li>
+                <ul class="nav_links">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="agents.html">Agents</a></li>
                     <li><a href="maps.html">Maps</a></li>
                     <li><a href="arsenal.html">Arsenal</a></li>
                 </ul>
             </nav>
-            <figure>
-                <img src="images/VALORANT_Logo_V.jpg" alt="Valorant Logo" width="1000"/>
-                <figcaption>Valorant Logo</figcaption>
-            </figure>
+            <h1>VALORANT</h1>
+            <a class="skip" href="#maincontent">
+                Skip to content
+            </a>
         </header>
         <main>
-            <p>Valorant is a free-to-play, team-based, first-person hero shooter developed and published by Riot Games. Players play in
+            <figure>
+                <img class="mainimg" src="images/VALORANT_Logo_V.jpg" alt="Valorant Logo"/>
+                <figcaption>Valorant Logo</figcaption>
+            </figure>
+            <p id="maincontent">Valorant is a free-to-play, team-based, first-person hero shooter developed and published by Riot Games. Players play in
                 teams with each playing as an Agent of the Valorant Protocol. Agents (link here) have abilities, each requiring
                 charges, as well as a unique ultimate ability that requires charging through kills, deaths, orbs, or objectives. Each 
                 match of Valorant takes place on a Map (link here) which are important locations according to the lore of the Valorant 
@@ -38,7 +46,7 @@
                 Deathmatch
             </h3>
             <figure>
-                <img src="images/Modes_Deathmatch.png" alt="Deathmatch Mode" width="300" style="background-color: black"/>
+                <img class="modes_img" src="images/Modes_Deathmatch.png" alt="Deathmatch Mode"/>
                 <figcaption>Deathmatch Mode</figcaption>
             </figure>
             <p>Deathmatch is a free shooting mode designed to let player hone their gunplay mechanics for actual gameplay in the rest of the modes.
@@ -49,7 +57,7 @@
                 Unrated
             </h3>
             <figure>
-                <img src="images/Modes_Competitive.png" alt="Unmrate Mode" width="300" style="background-color: black"/>
+                <img class="modes_img" src="images/Modes_Competitive.png" alt="Unmrate Mode"/>
                 <figcaption>Unrated Mode</figcaption>
             </figure>
             <p>Unrated is Valorant's standard mode. Players are divided into two teams where the Attacker team's objective is to plant and detonate 
@@ -61,7 +69,7 @@
                 Competitive
             </h3>
             <figure>
-                <img src="images/Modes_Competitive.png" alt="Competitive Mode" width="300" style="background-color: black"/>
+                <img class="modes_img" src="images/Modes_Competitive.png" alt="Competitive Mode"/>
                 <figcaption>Competitive Mode</figcaption>
             </figure>
             <p>Competitive is a higher stakes version of Unrated where players play competitively to earn and compete for a rank. Should a game reach
@@ -73,7 +81,7 @@
                 Spike Rush
             </h3>
             <figure>
-                <img src="images/Modes_Spike_Rush.png" alt="Spike Mode" width="300" style="background-color: black"/>
+                <img class="modes_img" src="images/Modes_Spike_Rush.png" alt="Spike Mode"/>
                 <figcaption>Spike Rush Mode</figcaption>
             </figure>
             <p>Spike Rush is a shorter version of Unrated. Instead of buying their weapon of choice, players are provided a default gun for the round, which
@@ -82,8 +90,9 @@
         </main>
         <footer>
             <p>This project was created under Riot Games' <a href="https://www.riotgames.com/en/legal">Legal Jibber Jabber policy</a> using assets owned by Riot Games.  
-                Riot Games does not endorse or sponsor this project.</p> 
+                Riot Games does not endorse or sponsor this project.<br>
             <a target="_blank" href="https://icons8.com/icon/GSHWFnD9x56D/valorant">Valorant</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </p> 
         </footer>
     </body>
 </html>
