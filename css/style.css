@@ -140,7 +140,7 @@ img:hover, img:focus {
     height: auto;
     border: solid;
     border-image: linear-gradient(to right, rgb(0, 0, 192), darkorchid) 1;
-    background-image: url(/images/bg_img.jpg);
+    background-image: url(/portfolio-content/images/bg_img.jpg);
 }
 
 .agent_img, .map_img {
@@ -165,7 +165,7 @@ img:hover, img:focus {
     height: auto;
     border: solid;
     border-image: linear-gradient(to right, rgb(0, 0, 192), darkorchid) 1;
-    background-image: url(/images/bg_img.jpg);
+    background-image: url(/portfolio-content/images/bg_img.jpg);
 }
 
 
