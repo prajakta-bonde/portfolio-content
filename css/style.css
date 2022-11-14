@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Space+Mono&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+body {
     background-color: #192227;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-rows: 170px 1fr auto;
 }
 
-li, a {
+li a, .skip {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
     color: #edf0f1;
@@ -18,36 +19,66 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    /* padding: 10px 10%; */
+    /* align-items: flex-start; */
+    grid-row: 1 / span 1;
+    grid-column: 1/ span 1;
+    background-color: #141d20;
+    border-radius: 10px;
+}
+
+main {
+    /* margin-left: 0; */
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
 }
 
 h1,h2,h3,p,figcaption {
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
-    margin: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    justify-content: center;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
 }
 
 .active {
     padding: 9px 15px;
-    background-color: #872F3B; /* #FF4654; */
+    background-color: #872F3B; 
     border: none;
     border-radius: 50px;
-    
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
 nav {
     align-items: left;
+    
+}
+
+footer {
+    margin-bottom: 0px;
+    background-color: #872F3B;
+    grid-row: 3/ span 1;
+    grid-column: 1/ span 1;
+    border-radius: 10px;
+}
+
+form {
+    padding: 20px;
 }
 
 .nav_links {
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
+    /* display: inline-block; */
+    padding: 5px 5px;
 }
 
 .nav_links li a {
@@ -61,6 +92,8 @@ nav {
 
 .skip {
     transition: all 0.3s ease 0s;
+    animation: slideIn 1.5s;
+    padding-right: 5px;
 }
 
 .skip:hover {
@@ -69,14 +102,24 @@ nav {
 }
 
 .mainimg {
-    height: 855px;
-    width: auto;
-    width: fit-content;
+    padding: 0px;
+    height: auto;
+    width: 75vw;
+    opacity: 0.5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: solid;
     border-image: linear-gradient(to right, rgb(0, 0, 192), darkorchid) 1;
+    animation: fadeIn 3s;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 img:hover, img:focus {
@@ -93,15 +136,16 @@ img:hover, img:focus {
     height: auto;
     border: solid;
     border-image: linear-gradient(to right, rgb(0, 0, 192), darkorchid) 1;
+    background-image: url(/images/bg_img.jpg);
 }
 
-.agent_img ,.map_img {
+.agent_img, .map_img {
     display: block;
     margin: 10px 10px;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px;
-    width: 50%;
+    padding: 5px;
+    width: 50vw;
     height: auto;
     border: solid;
     border-image: linear-gradient(to right, rgb(0, 0, 192), darkorchid) 1;
@@ -112,11 +156,92 @@ img:hover, img:focus {
     margin: 10px 10px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    width: 30%;
+    padding: 5px;
+    width: 50vw;
     height: auto;
     border: solid;
     border-image: linear-gradient(to right, rgb(0, 0, 192), darkorchid) 1;
+    background-image: url(/images/bg_img.jpg);
 }
 
 
+.title_of_page {
+    margin: 0;
+    font-size: 30px;
+    /* text-align: center;
+    vertical-align: middle; */
+}
+
+.melee_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidearm_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.smg_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.shotgun_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.rifle_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.sniper_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+.machinegun_imgs {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; 
+    }
+    100% { opacity: 1; 
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+  
+    #home_title {
+        animation: none;
+    }
+    
+    #weapon_title {
+        animation: none;
+    }
+    
+    #agents_title {
+        animation: none;
+    }
+    
+    #maps_title {
+        animation: none;
+    }
+
+    .skip {
+        animation: none;
+    }
+  }
