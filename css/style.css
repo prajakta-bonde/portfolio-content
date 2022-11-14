@@ -15,6 +15,10 @@ li a, .skip {
     text-decoration: none;
 }
 
+a {
+    color: aquamarine;
+}
+
 header {
     display: flex;
     justify-content: space-between;
